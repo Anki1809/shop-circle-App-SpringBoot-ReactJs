@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: API-GATEWAY-SERVICE
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: PRODUCT-SERVICE
+            uri: lb://PRODUCT-SERVICE
+            predicates:
+              - Path=/product/**
+            filters:
+              - AuthenticationFilter
+          - id: USER-SERVICE
+            uri: lb://USER-SERVICE
+            predicates:
+              - Path=/api/**
+server:
+  port: 9092
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9091/eureka/
+      registerWithEureka: false
+      fetchRegistry: false
+  instance:
+    preferIpAddress: true
+

@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: PRODUCT-SERVICE
+server:
+  port: 9094
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9091/eureka/
+      registerWithEureka: false
+      fetchRegistry: false
+    enabled: false
+  instance:
+    preferIpAddress: true

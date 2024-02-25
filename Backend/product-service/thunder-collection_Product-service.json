@@ -1,0 +1,211 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Product-service",
+    "dateExported": "2024-02-25T13:55:41.201Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "3143beaf-40c8-4d3d-869a-ccaa87498e5e",
+            "name": "product-controller",
+            "containerId": "",
+            "created": "2024-02-25T07:08:58.347Z",
+            "sortNum": 10000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "bdae6d21-830b-4089-9033-207ab3c3537a",
+            "colId": "ef346219-f581-45f9-b1da-c9a74f96c59b",
+            "containerId": "3143beaf-40c8-4d3d-869a-ccaa87498e5e",
+            "name": "getMessage",
+            "url": "/api/product/status",
+            "method": "GET",
+            "sortNum": 2500,
+            "created": "2024-02-25T07:08:58.355Z",
+            "modified": "2024-02-25T07:08:58.355Z",
+            "headers": [],
+            "params": []
+        },
+        {
+            "_id": "e5cb1c5e-5554-47c1-8638-0b82394a845c",
+            "colId": "ef346219-f581-45f9-b1da-c9a74f96c59b",
+            "containerId": "3143beaf-40c8-4d3d-869a-ccaa87498e5e",
+            "name": "createProduct",
+            "url": "/api/product/",
+            "method": "POST",
+            "sortNum": 5000,
+            "created": "2024-02-25T07:08:58.352Z",
+            "modified": "2024-02-25T07:45:35.672Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"abcd\",\n  \"category\": \"newww\",\n  \"imageLink\": \"a\",\n  \"shopId\": 10,\n  \"unitPrice\": 11,\n  \"currentQuantity\": 12,\n  \"status\": \"OPEN\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ab8a64ca-e13b-4045-ba7d-2b382fcf2ba3",
+            "colId": "ef346219-f581-45f9-b1da-c9a74f96c59b",
+            "containerId": "3143beaf-40c8-4d3d-869a-ccaa87498e5e",
+            "name": "getProduct",
+            "url": "/api/product/{productId}/{status}",
+            "method": "GET",
+            "sortNum": 7500,
+            "created": "2024-02-25T07:08:58.354Z",
+            "modified": "2024-02-25T07:46:28.757Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "productId",
+                    "value": "52",
+                    "isPath": true
+                },
+                {
+                    "name": "status",
+                    "value": "1",
+                    "isPath": true
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "3d1dfaf7-7198-4b04-8d6c-5ef1d9bb1617",
+            "colId": "ef346219-f581-45f9-b1da-c9a74f96c59b",
+            "containerId": "3143beaf-40c8-4d3d-869a-ccaa87498e5e",
+            "name": "getAllByShopId",
+            "url": "/api/product/{shopId}/{status}/{pageNo}/{pageSize}",
+            "method": "GET",
+            "sortNum": 8750,
+            "created": "2024-02-25T07:08:58.353Z",
+            "modified": "2024-02-25T07:46:43.017Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "shopId",
+                    "value": "10",
+                    "isPath": true
+                },
+                {
+                    "name": "status",
+                    "value": "0",
+                    "isPath": true
+                },
+                {
+                    "name": "pageNo",
+                    "value": "1",
+                    "isPath": true
+                },
+                {
+                    "name": "pageSize",
+                    "value": "10",
+                    "isPath": true
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "84e31b85-7b67-45c4-81ad-8808ace5fa0b",
+            "colId": "ef346219-f581-45f9-b1da-c9a74f96c59b",
+            "containerId": "3143beaf-40c8-4d3d-869a-ccaa87498e5e",
+            "name": "updateProduct",
+            "url": "/api/product/{productId}?name=ADsssE    &unitprice=65&status=OPEN",
+            "method": "PUT",
+            "sortNum": 10000,
+            "created": "2024-02-25T07:08:58.348Z",
+            "modified": "2024-02-25T07:52:55.843Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "productId",
+                    "value": "52",
+                    "isPath": true
+                },
+                {
+                    "name": "name",
+                    "value": "ADsssE    ",
+                    "isPath": false
+                },
+                {
+                    "name": "category",
+                    "value": "thunder",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "imagelink",
+                    "value": "thunder",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "unitprice",
+                    "value": "65",
+                    "isPath": false
+                },
+                {
+                    "name": "status",
+                    "value": "OPEN",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "ae4d2610-552d-4151-a30d-a71fa9f172e0",
+            "colId": "ef346219-f581-45f9-b1da-c9a74f96c59b",
+            "containerId": "3143beaf-40c8-4d3d-869a-ccaa87498e5e",
+            "name": "subQuantityByProductId",
+            "url": "/api/product/sub/{productId}/{subQuantity}",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-02-25T07:08:58.349Z",
+            "modified": "2024-02-25T08:01:30.171Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "productId",
+                    "value": "52",
+                    "isPath": true
+                },
+                {
+                    "name": "subQuantity",
+                    "value": "100",
+                    "isPath": true
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "9f26dc46-8384-4fbe-af12-f794ef0a07dc",
+            "colId": "ef346219-f581-45f9-b1da-c9a74f96c59b",
+            "containerId": "3143beaf-40c8-4d3d-869a-ccaa87498e5e",
+            "name": "addQuantityByProductId",
+            "url": "/api/product/add/{productId}/{addQuantity}",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-02-25T07:08:58.351Z",
+            "modified": "2024-02-25T08:00:43.176Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "productId",
+                    "value": "52",
+                    "isPath": true
+                },
+                {
+                    "name": "addQuantity",
+                    "value": "5",
+                    "isPath": true
+                }
+            ],
+            "tests": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "{{baseUrl}}"
+        }
+    }
+}

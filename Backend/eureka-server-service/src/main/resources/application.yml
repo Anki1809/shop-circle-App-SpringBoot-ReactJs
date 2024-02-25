@@ -1,0 +1,7 @@
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+spring:
+  application:
+    name: EUREKA-DISCOVERY-SERVER-SERVICE
